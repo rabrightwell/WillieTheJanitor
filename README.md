@@ -33,10 +33,20 @@ Legend of Map Entities:
 'D' Drink
 'T' Trap
 
+TO RUN:
+Modify the input file as desired. The input file will be read as follows:
+  1. Num of days for simulation
+  2. Size of school
+  3. Num of drinks
+  4. Num of traps
+  5. Window placement frequency (1 per every __ blocks)
+
+Note: an output file output.dat can be used to stream output stats (could not be loaded into GitHub because it is an empty file)
+
 Note: This simulation output will be seen in console. A small "rest" period between each new update is established with a usleep() function. The current input parameter of 20000 was set based on my own system settings, but may need to be adjusted for other setups for smooth/readable transitions.
 
 
-This simulation relies on five classes:
+This simulation relies on four classes:
 
 school class:
 --------------
@@ -105,7 +115,3 @@ a float member for "effect". The value of this member will be determined for eac
 member function:
 A constructor that will assign to its "effect" variable at random from the following intervals: [-.010, -0.001] and [0.05, 0.10]. This will determine the name of the drink, too.
 
-trap class:
------------
-member variables:
-char representation
